@@ -1,0 +1,30 @@
+{
+  "name": "identitiesproject",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^11.2.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.15",
+    "npm": "^6.14.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sh1ro0o/cardGame-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sh1ro0o/cardGame-backend/issues"
+  },
+  "homepage": "https://github.com/Sh1ro0o/cardGame-backend#readme",
+  "description": ""
+}
