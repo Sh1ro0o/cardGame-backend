@@ -22,8 +22,26 @@ module.exports = {
         res.sendFile(path.join(__dirname, '..', 'Views', 'index.html'));
     },
 
-    sendMainPage : function (req, res) {
-        res.json(users);
+    sendUser : function (req, res) {
+        let username = req.body.username;
+        let password = req.body.password;
+
+        console.log(req.body.username);
+        console.log(req.body.password);
+
+        User.findOne({username: username, password: password}, (err, user) => {
+            if(err) {
+                console.log(err);
+                console.log("500");
+                return res.status(500).send();
+            }
+            if(!user) {
+                console.log("error 404 user not found!")
+                return res.status(404).send();
+            }
+            console.log(user);
+            return res.json(user);
+        });
     },
     
     postUser : function (req, res) {

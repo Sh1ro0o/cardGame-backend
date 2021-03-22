@@ -11,10 +11,10 @@ function consoleLogHello (req, res, next)
 router.use(consoleLogHello);
 //get
 router.get('/', usersController.index);
-//gets all users
-router.get('/getAll', usersController.sendMainPage);
+//gets a certain user based on a unique username
 //post
-router.post('/user', usersController.postUser);
+router.post('/register', usersController.postUser);
+router.post('/login', usersController.sendUser);
 //set
 
 //delete
