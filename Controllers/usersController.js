@@ -29,6 +29,7 @@ module.exports = {
         console.log(req.body.username);
         console.log(req.body.password);
 
+        //fetches one user
         User.findOne({username: username, password: password}, (err, user) => {
             if(err) {
                 console.log(err);
